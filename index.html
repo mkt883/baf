@@ -1,59 +1,109 @@
-hello World!
-
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            body, html {
-	            height: 100%;
-            }
-            html{
-                height: 100%;
-                background-image:url("code.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
-            <div class="item">
-                Technique: hsfid
-            </div>
+<head>
+    <style>
+        /* FULL PAGE BACKGROUND IMAGE: */
+        body, html {
+            height: 100%;
+        }
+        html{
+            height: 100%; 
+            background-image:url("code.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* GRID OF 'FLEXBOX' BOXES */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            width: 32%;
+            padding-bottom: 18%; /* 32:18, i.e. 16:9 */
+            margin-bottom: 2%; /* (100-32*3)/2 */
+            background-color: rgba(255,255,255,0.8);
+            color: rgb(240, 243, 246);
+            background-size: cover;
+        }
+        /* INDIVIDUAL BOXES */
+        #one{
+            background-image:url("code.jpg");
+            transform:rotate(12deg);
+            
+            top:30%;
+            left:30%;
+        }
+    </style>
+
+</head>
+
+<body>
+ 
+    <div class="container">
+        <div id="one" class="item">
+            Box 1
         </div>
-    </body>
+        <div class="item">
+            Box 2
+        </div>
+        <div class="item">
+            Box 3
+        </div> 
+        <div class="item">
+            Box 4
+        </div> 
+        <div class="item">
+            Box 5
+        </div> 
+        <div class="item">
+            Box 6
+        </div> 
+    </div>
+
+    <script>
+        
+        // RANDOMISE POSITIONS OF THE ITEM DIVS
+        randomLocation();
+        function randomLocation(){
+            const items = document.getElementsByClassName("item");
+            for (let i = 0; i < items.length; i++) {
+                let style = randomPosition(); 
+                items.item(i).setAttribute("style", style);
+                //items.item(i).innerHTML = " new content here";
+            }
+        }
+
+        // GENERATE A STYLE FOR THE ELEMENT
+        function randomPosition(){
+            let top = rand(100);                    // Random number between 0 and 100 
+            let bottom = rand(100);                 // Random number between 0 and 100 
+            let deg = rand(360);                    // Random number between 0 and 360 
+            let style = "";
+            style += "transform:rotate("+deg+"deg);";
+            style += "position:absolute;";
+            style += "top:"+top+"%;";
+            style += "left:"+bottom+"%;";
+            return style;
+        }
+
+        function rand(i){
+            return Math.floor(Math.random()*i); 
+        }
+        
+        // AUTO-GENERATE FORM ELEMENTS "checkbox","color","date","month","radio","range","submit"
+        /* See: http://resources.theanthillsocial.co.uk/experiments/autoform/ */
+        // AUTO-GENERATE FORM ELEMENT <input type="" style=""> 
+        //let style = randomPosition();
+        //createInput("range", style);  
+        function createInput(type, style){
+            const input = document.createElement("input");  // Creates: <input type="">
+            input.setAttribute("type", type);               // e.g.: <input type="button">
+            input.setAttribute("style", style);             // Set the postion of the element
+            document.body.appendChild(input);               // Add this HTML element to the 'body'
+        }
+            
+    </script>
+
+</body>
 </html>
-
-<!-- 
-    
-    bg image on site,
-        - generate your ownm pictures (no prefound mats)
-
-    answer div container things for own idea
-
--->
