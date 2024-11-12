@@ -1,109 +1,158 @@
 <!DOCTYPE html>
-<head>
+<html>
+  <head>
     <style>
-        /* FULL PAGE BACKGROUND IMAGE: */
-        body, html {
-            height: 100%;
-        }
-        html{
-            height: 100%; 
-            background-image:url("code.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        /* GRID OF 'FLEXBOX' BOXES */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .item {
-            width: 32%;
-            padding-bottom: 18%; /* 32:18, i.e. 16:9 */
-            margin-bottom: 2%; /* (100-32*3)/2 */
-            background-color: rgba(255,255,255,0.8);
-            color: rgb(240, 243, 246);
-            background-size: cover;
-        }
-        /* INDIVIDUAL BOXES */
-        #one{
-            background-image:url("code.jpg");
-            transform:rotate(12deg);
-            
-            top:30%;
-            left:30%;
-        }
+      /* GRID OF 'FLEXBOX' BOXES */
+      
+      h1 {
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        animation: chromaticMove 4500ms ease alternate infinite;
+        top: 0;
+        position: sticky;
+      }
+      
+      h4 {
+        text-align: center;
+      }
+      
+      img {
+        border: 10px solid black;
+        max-width: 500px;
+      }
+      
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.item {
+	width: 32%;
+  font-family: sans-serif;
+  padding: 10px 10px 0 10px;
+  padding-bottom: 18%; /* 32:18, i.e. 16:9 */
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  background-color: rgba(0,0,255,0.8);
+  color: rgb(240, 243, 246);
+  background-size: cover;
+}
+/* div{border:1px solid #ccc;} */
+      
+body, html {
+	height: 100%;
+}
+html{
+	height: 100%;
+	background-image:url("https://media4.giphy.com/media/8Z8Zzm68kKrMUAQyOl/200w.gif?cid=6c09b952lqju69m5vizky8bf5befhoqpsj37g7fj7pesfsdq&ep=v1_gifs_search&rid=200w.gif&ct=g");
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
+}
+      
+@keyframes chromaticMove { 
+    0%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),0px 0px -2px rgba(52, 251, 12, 1);}
+    50%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 2px 3px rgba(52, 251, 12, 1);}
+    100%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),2px -1px 2px rgba(52, 251, 12, 1);}
+}
     </style>
-
 </head>
-
 <body>
- 
-    <div class="container">
-        <div id="one" class="item">
-            Box 1
+  <h1>
+     CONTROLLERS
+  </h1>
+
+      <div class="container">
+        <div class="item">
+            <h4>Technique: Defamiliarise</h4><br>
+          <li>Controller: A person or thing that directs or regulates something</li>
+          <li>Ludology and Ludic interfaces</li>
+          <li>Viewing everything ludically and as a controller, how can I use this in out of the box ways</li><br>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/Watch_Dogs_2_Gameplay_Walkthrough_Open_World_Free_Roam_with_Multiplayer_GamesCom_2016_NA.gif?v=1731363926012">
         </div>
         <div class="item">
-            Box 2
-        </div>
-        <div class="item">
-            Box 3
+            <h4>Technique: Document</h4><br>
+              <li>A series of experiments</li>
+              <li>Document what is and isn't possible and why (through evaluation)</li>
+              <li>I'd document the breakdown of the technology I'm investigating</li>
+              <li>I'd document how I'd do the experiment</li>
+              <li>Other potential implication (e.g dangers?)</li>
+              <li>Ease of doing what I've done</li><br>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/72271af0-c196-4d9a-bde4-68ed89c3bd17.image.png?v=1731368849441">
         </div> 
         <div class="item">
-            Box 4
+            <h4>Technique: Break</h4><br>
+          <li>Break down of controllers/technologies, e.g:</li>
+          <ul>
+            <li>Phone</li>
+            <li>Website</li>
+            <li>Apps?</li>
+            <li>etc.</li>
+          </ul>
+          <li>Could then investigate individual components and see how else they can be used (e.g. signals on a phone, tv remote emulators)</li><br>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/Screenshot%202024-11-11%20at%2022.54.55.png?v=1731365718431">
         </div> 
         <div class="item">
-            Box 5
+            <h4>Technique: Explore code</h4><br>
+          <li>-	Looking into the technologies would require me to interact with the code (to understand it better at the bare minimum)</li>
+          <ul><li>e.g. 'hacking websites'?</li></ul>
+          <li>Could also use code to create more opportunities for other experiments (e.g. coding my own controller interface app?)</li><br>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/Screenshot%202024-11-11%20at%2022.57.05.png?v=1731365855937">
         </div> 
         <div class="item">
-            Box 6
+            <h4>Technique: Map components</h4><br>
+          <li>Showing the different components related to the technology or what’s relevant to the experiment and why</li><br>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/64cf3514-76cf-4215-8b05-edf326878a8a.image.png?v=1731366629075">
+        </div> 
+        <div class="item">
+            <h4>Association: Historical</h4><br>
+          <li>Look at the development of controllers</li>
+          <li>The different types of controllers (conventional and unconventional)</li><br>
+          <img src="https://i.extremetech.com/imagery/content-types/03evu81BaEwyDwNYW2uwHId/hero-image.fit_lim.v1678673103.jpg">
+        </div> 
+        <div class="item">
+            <h4>Association: Technical</h4><br>
+          <li>Looking into the components for e.g. a phone and fully understanding them would get technical</li>
+          <li>Explaining the mechanics and technical concepts behind the devices i'm using</li><br>
+          <img src="https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif">
+        </div> 
+        <div class="item">
+            <h4>Association: Feelings</h4><br>
+          <li>I like to try and be creative with my interfaces (e.g. using excel/pirate pad to make pictures instead of write) </li>
+          <li>I like the idea of ludology and learning how I can break down these interfaces to do what I want</li>
+          <li>Think these skills are good to have in general and could be developed further for jobs</li>
+          <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/golden-thumbs-up-e1K4DJ5-600.jpg">
+
+        </div> 
+        <div class="item">
+            <h4>Association: Political</h4><br>
+          <li>Technology generally isn’t created with what I want to investigate in mind</li>
+          <li>Lots of evidence that company’s are doing stuff with our data bts w/o our knowledge, politics of power in play?</li>
+          <li>If at all, how have these technological controllers been used in a political framework</li>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/Screenshot%202024-11-11%20at%2023.58.39.png?v=1731369538272">
+        </div> 
+        <div class="item">
+            <h4>Association: Gender</h4><br>
+          <li>Is there a significant gender impact in regard to controllers?</li>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/af70826b-ffbc-48e0-9f49-b8e9da4926b4.image.png?v=1731369152878">
+        </div> 
+        <div class="item">
+            <h4>Association: Social class</h4><br>
+            <li>Is there a major class impact?</li>
+            <li>What are the differences?</li>
+          <ul>
+            <li>e.g. more security cameras in richer areas</li>
+            <li>Council iposed control vs individual?</li>
+          </ul><br>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/Screenshot%202024-11-11%20at%2023.05.14.png?v=1731366341503">
+        </div> 
+        <div class="item">
+            <h4>Association: Race</h4><br>
+          <li>Are any controllers racially biased? (racial profiling tech?), how so?</li>
+          <li>Anything in history?</li>
+          <img src="https://cdn.glitch.global/4c4a6ada-5c5b-48bb-9ce1-0499b654567c/Screenshot%202024-11-11%20at%2023.56.57.png?v=1731369455516">
         </div> 
     </div>
-
-    <script>
-        
-        // RANDOMISE POSITIONS OF THE ITEM DIVS
-        randomLocation();
-        function randomLocation(){
-            const items = document.getElementsByClassName("item");
-            for (let i = 0; i < items.length; i++) {
-                let style = randomPosition(); 
-                items.item(i).setAttribute("style", style);
-                //items.item(i).innerHTML = " new content here";
-            }
-        }
-
-        // GENERATE A STYLE FOR THE ELEMENT
-        function randomPosition(){
-            let top = rand(100);                    // Random number between 0 and 100 
-            let bottom = rand(100);                 // Random number between 0 and 100 
-            let deg = rand(360);                    // Random number between 0 and 360 
-            let style = "";
-            style += "transform:rotate("+deg+"deg);";
-            style += "position:absolute;";
-            style += "top:"+top+"%;";
-            style += "left:"+bottom+"%;";
-            return style;
-        }
-
-        function rand(i){
-            return Math.floor(Math.random()*i); 
-        }
-        
-        // AUTO-GENERATE FORM ELEMENTS "checkbox","color","date","month","radio","range","submit"
-        /* See: http://resources.theanthillsocial.co.uk/experiments/autoform/ */
-        // AUTO-GENERATE FORM ELEMENT <input type="" style=""> 
-        //let style = randomPosition();
-        //createInput("range", style);  
-        function createInput(type, style){
-            const input = document.createElement("input");  // Creates: <input type="">
-            input.setAttribute("type", type);               // e.g.: <input type="button">
-            input.setAttribute("style", style);             // Set the postion of the element
-            document.body.appendChild(input);               // Add this HTML element to the 'body'
-        }
-            
-    </script>
 
 </body>
 </html>
